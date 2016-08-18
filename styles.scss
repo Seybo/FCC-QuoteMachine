@@ -1,0 +1,76 @@
+$background: #ffffff #e1eef6 #34314c #d9e1e8 #A593E0
+             #f4f5f9 #fbd14b #fff1b9 #75D701;
+
+$color-1:    #4F4B5A #ff5f2e #47b8e0 #2b90d9 #FFFFF3
+             #f1404b #6a60a9 #5e5e5f #F8F8FF;
+
+$color-2:    #66A9A5 #fcbe32 #ffc952 #9baec8 #566270
+             #252c41 #fffcf0 #272625 #3B4E32;
+
+$sh-light: rgba(79, 75, 90, 0.7);
+$sh-dark: rgba(0, 0, 0, 0.3);
+
+$shadow: $sh-light $sh-light $sh-dark $sh-light $sh-light
+         $sh-light $sh-light $sh-dark $sh-light;
+
+$schema-number: random(9);
+
+body {
+  background: nth($background, $schema-number);
+}
+
+.container {
+  position: relative;
+  margin: 10vh auto;
+  width: 1000px;
+
+  color: nth($background, $schema-number);
+
+  .wrapper {
+    position: relative;
+
+    margin: auto; // block content centering
+
+    .background {
+      position: relative; // needed for z-index to work
+      height: 100%;
+      z-index: 5;
+
+      .color-1 {
+        fill: nth($color-1, $schema-number); 
+      }       
+      .color-2 {
+        fill: nth($color-2, $schema-number); 
+      }       
+      .background {
+        fill: nth($background, $schema-number); 
+      }       
+    }
+
+    .quote, .author {
+      position: absolute;
+      border-radius: 20px;
+      padding: 20px;
+      width: 380px;
+      box-sizing: border-box;
+      z-index: 1;
+      box-shadow: 3px 3px 3px nth($shadow, $schema-number);
+    }
+
+    .quote {
+      padding-right: 30px;
+      background: nth($color-1, $schema-number);
+      bottom: 270px;
+      left: 12px;
+         
+    }
+
+    .author {
+      padding-left: 40px;
+      background: nth($color-2, $schema-number);;
+      bottom: 353px;
+      right: 10px;
+    } 
+  }
+  
+}

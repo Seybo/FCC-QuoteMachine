@@ -1,0 +1,57 @@
+body {
+  background: #A593E0;
+}
+
+.container {
+  position: relative;
+  margin: 10vh auto;
+  width: 1000px;
+  color: #A593E0;
+}
+
+.container .wrapper {
+  position: relative;
+  margin: auto;
+}
+
+.container .wrapper .background {
+  position: relative;
+  height: 100%;
+  z-index: 5;
+}
+
+.container .wrapper .background .color-1 {
+  fill: #FFFFF3;
+}
+
+.container .wrapper .background .color-2 {
+  fill: #566270;
+}
+
+.container .wrapper .background .background {
+  fill: #A593E0;
+}
+
+.container .wrapper .quote, .container .wrapper .author {
+  position: absolute;
+  border-radius: 20px;
+  padding: 20px;
+  width: 380px;
+  box-sizing: border-box;
+  z-index: 1;
+  box-shadow: 3px 3px 3px rgba(79, 75, 90, 0.7);
+}
+
+.container .wrapper .quote {
+  padding-right: 30px;
+  background: #FFFFF3;
+  bottom: 270px;
+  left: 12px;
+}
+
+.container .wrapper .author {
+  padding-left: 40px;
+  background: #566270;
+  bottom: 353px;
+  right: 10px;
+}
