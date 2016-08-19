@@ -24,7 +24,7 @@ body {
   margin: 10vh auto;
   width: 1000px;
 
-  color: nth($background, $schema-number);
+  // color: nth($background, $schema-number);
 
   .wrapper {
     position: relative;
@@ -34,7 +34,7 @@ body {
     .background {
       position: relative; // needed for z-index to work
       height: 100%;
-      z-index: 5;
+      // z-index: 5;
 
       .color-1 {
         fill: nth($color-1, $schema-number); 
@@ -53,13 +53,15 @@ body {
       padding: 20px;
       width: 380px;
       box-sizing: border-box;
-      z-index: 1;
+      z-index: -1;
+    }
+
+    .shadowed {
       box-shadow: 3px 3px 3px nth($shadow, $schema-number);
     }
 
     .quote {
       padding-right: 30px;
-      background: nth($color-1, $schema-number);
       bottom: 270px;
       left: 12px;
          
@@ -67,7 +69,6 @@ body {
 
     .author {
       padding-left: 40px;
-      background: nth($color-2, $schema-number);;
       bottom: 353px;
       right: 10px;
     } 
