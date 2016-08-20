@@ -1,0 +1,62 @@
+[
+  {
+    "background": "#d8e9ef",
+    "color1": "#e85a71",
+    "color2": "#454552",
+    "shadow": "3px 3px 3px rgba(79, 75, 90, 0.7)"
+  },
+  {
+    "background": "#ffffff",
+    "color1": "#4F4B5A",
+    "color2": "#66A9A5",
+    "shadow": "3px 3px 3px rgba(79, 75, 90, 0.7)"
+  },
+  {
+    "background": "#34314c",
+    "color1": "#47b8e0",
+    "color2": "#ffc952",
+    "shadow": "3px 3px 3px rgba(0, 0, 0, 0.3)"
+  },
+  {
+    "background": "#d9e1e8",
+    "color1": "#2b90d9",
+    "color2": "#9baec8",
+    "shadow": "3px 3px 3px rgba(79, 75, 90, 0.7)"
+  },
+  {
+    "background": "#e1eef6",
+    "color1": "#ff5f2e",
+    "color2": "#fcbe32",
+    "shadow": "3px 3px 3px rgba(79, 75, 90, 0.7)"
+  },
+  {
+    "background": "#E0E3DA",
+    "color1": "#7599A0",
+    "color2": "#566270",
+    "shadow": "3px 3px 3px rgba(79, 75, 90, 0.7)"
+  },
+  {
+    "background": "#534847",
+    "color1": "#FADAD8",
+    "color2": "#D09E88",
+    "shadow": "3px 3px 3px rgba(0, 0, 0, 0.3)"
+  },
+  {
+    "background": "#F16B6F",
+    "color1": "#3C3530",
+    "color2": "#AACD6E",
+    "shadow": "3px 3px 3px rgba(0, 0, 0, 0.3)"
+  },
+  {
+    "background": "#75D701",
+    "color1": "#3B4E32",
+    "color2": "#F8F8FF",
+    "shadow": "3px 3px 3px rgba(79, 75, 90, 0.7)"
+  },
+  {
+    "background": "#274c5e",
+    "color1": "#dae9f4",
+    "color2": "#7f9eb2",
+    "shadow": "3px 3px 3px rgba(0, 0, 0, 0.3)"
+  }
+]

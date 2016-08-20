@@ -1,0 +1,79 @@
+body {
+  background: #ffffff;
+}
+
+.container {
+  position: relative;
+  margin: 10vh auto;
+  width: 1000px;
+  color: #ffffff;
+}
+
+.container .wrapper {
+  position: relative;
+  margin: auto;
+}
+
+.container .wrapper .bg {
+  height: 100%;
+  position: relative;
+  z-index: 999;
+}
+
+.container .wrapper .bg .button {
+  position: absolute;
+  left: 40%;
+  top: 25%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  background: #ff5f2e;
+  box-shadow: 3px 3px 3px rgba(79, 75, 90, 0.7);
+  cursor: pointer;
+}
+
+.container .wrapper .bg .button:hover {
+  transform: scale(1.1);
+  transition: all .2s ease-in-out;
+}
+
+.container .wrapper .bg .color-1 {
+  fill: #4F4B5A;
+}
+
+.container .wrapper .bg .color-2 {
+  fill: #66A9A5;
+}
+
+.container .wrapper .bg .background {
+  fill: #ffffff;
+}
+
+.container .wrapper .quote, .container .wrapper .author {
+  position: absolute;
+  border-radius: 20px;
+  padding: 20px;
+  width: 380px;
+  box-sizing: border-box;
+}
+
+.container .wrapper .shadowed {
+  box-shadow: 3px 3px 3px rgba(79, 75, 90, 0.7);
+}
+
+.container .wrapper .quote {
+  padding-right: 30px;
+  bottom: 280px;
+  left: -40px;
+  background: #4F4B5A;
+}
+
+.container .wrapper .author {
+  padding-left: 40px;
+  bottom: 340px;
+  right: 90px;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  background: #66A9A5;
+}

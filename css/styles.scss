@@ -16,7 +16,7 @@ $shadow: $sh-light $sh-light $sh-dark $sh-light $sh-light
 $schema-number: random(9);
 
 body {
-  background: nth($background, $schema-number);
+  background: #ffffff;
 }
 
 .container {
@@ -24,26 +24,43 @@ body {
   margin: 10vh auto;
   width: 1000px;
 
-  // color: nth($background, $schema-number);
+  color: #ffffff;
 
   .wrapper {
     position: relative;
 
     margin: auto; // block content centering
 
-    .background {
-      position: relative; // needed for z-index to work
+    .bg {
       height: 100%;
-      // z-index: 5;
+      position: relative; // needed for z-index
+      z-index: 999;
 
+      .button {
+        position: absolute;
+        left: 40%;
+        top: 25%;
+        width: 60px;
+        height: 60px;
+        border-radius: 50px;
+        background: #ff5f2e;
+        box-shadow: 3px 3px 3px $sh-light;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.1);
+          transition: all .2s ease-in-out;  
+        }
+      }
+    
       .color-1 {
-        fill: nth($color-1, $schema-number); 
+        fill: #4F4B5A; 
       }       
       .color-2 {
-        fill: nth($color-2, $schema-number); 
+        fill: #66A9A5; 
       }       
       .background {
-        fill: nth($background, $schema-number); 
+        fill: #ffffff; 
       }       
     }
 
@@ -53,24 +70,27 @@ body {
       padding: 20px;
       width: 380px;
       box-sizing: border-box;
-      z-index: -1;
     }
 
     .shadowed {
-      box-shadow: 3px 3px 3px nth($shadow, $schema-number);
+      box-shadow: 3px 3px 3px $sh-light;
     }
 
     .quote {
       padding-right: 30px;
-      bottom: 270px;
-      left: 12px;
-         
+      bottom: 280px;
+      left: -40px;
+      background: #4F4B5A;
     }
 
     .author {
       padding-left: 40px;
-      bottom: 353px;
-      right: 10px;
+      bottom: 340px;
+      right: 90px;
+      font-style: italic;
+      font-weight: bold;
+      text-align: center;
+      background: #66A9A5;
     } 
   }
   
