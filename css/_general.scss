@@ -1,0 +1,145 @@
+$font-size: 20px;
+$quote-font-size: 50px;
+
+body {
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.container {
+  position: relative;
+  margin: 10vh auto;
+  width: 1201px;
+
+  color: #ffffff;
+
+  .wrapper {
+    position: relative;
+    height: 500px;
+    // width: 1000px;
+    // margin: auto; // block content centering
+
+    .bg {
+      width: 500px;
+      margin: 2vh auto;
+
+      .color-1 {
+        fill: #4F4B5A; 
+      }       
+      .color-2 {
+        fill: #66A9A5; 
+      }       
+      .background {
+        fill: #ffffff; 
+      }    
+    }
+    
+    .button {
+      position: absolute;
+      left: 575px;
+      top: 100px;
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+      background: #ff5f2e;
+      box-shadow: 3px 3px 3px rgba(79, 75, 90, 0.7);
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.1);
+        transition: all .2s ease-in-out;  
+      }
+    }
+
+    .quote, .author {
+      position: absolute;
+      border-radius: 20px;
+      padding: 20px;
+      width: 380px;
+    }
+
+    .shadowed {
+      box-shadow: 3px 3px 3px rgba(79, 75, 90, 0.7);
+    }
+
+    .quote {
+      padding-right: 30px;
+      bottom: 170px;
+      left: 130px;
+      background: #4F4B5A;
+    }
+
+    .author {
+      width: 350px;
+      bottom: 110px;
+      right: 130px;
+      font-style: italic;
+      font-weight: bold;
+      text-align: center;
+      background: #66A9A5;
+    } 
+
+    .quote-open {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      bottom: 150px;
+      border-radius: 25px;
+      font-size: $quote-font-size;
+      padding: 8px 0 9px 14px;
+      left: 480px;
+      background: #4F4B5A;
+    }
+
+    .quote-close {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      bottom: 90px;
+      border-radius: 25px;
+      font-size: $quote-font-size;
+      padding: 8px 0 9px 14px;
+      right: 450px;
+      background: #66A9A5;
+    }
+
+  }
+  
+}
+
+.quote-animation {
+
+  animation-name: animation-text-appearing;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+
+}
+
+.author-animation {
+
+  animation-name: animation-text-appearing;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+
+}
+
+@keyframes animation-text-appearing {
+
+  from {
+
+      opacity: 0;
+
+  }  
+
+  to {
+
+      opacity: 1;
+      
+  }  
+
+}

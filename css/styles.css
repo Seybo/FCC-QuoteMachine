@@ -404,21 +404,6 @@ textarea {
   /* 2 */
 }
 
-/* Large desktops and laptops more than 1200px */
-/* Landscape tablets 993 to 1200px and medium desktops */
-/* Portrait tablets 768 to 992px and small desktops */
-/* Landscape phones 481 to 767px and portrait tablets */
-/* Portrait phones 480px and smaller */
-@media (max-width: 480px) {
-  svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50px;
-    height: 50px;
-  }
-}
-
 body {
   background: #ffffff;
   box-sizing: border-box;
@@ -431,7 +416,7 @@ body {
 .container {
   position: relative;
   margin: 10vh auto;
-  width: 1200px;
+  width: 1201px;
   color: #ffffff;
 }
 
@@ -463,7 +448,7 @@ body {
   top: 100px;
   width: 60px;
   height: 60px;
-  border-radius: 50px;
+  border-radius: 30px;
   background: #ff5f2e;
   box-shadow: 3px 3px 3px rgba(79, 75, 90, 0.7);
   cursor: pointer;
@@ -493,8 +478,9 @@ body {
 }
 
 .container .wrapper .author {
+  width: 350px;
   bottom: 110px;
-  right: 100px;
+  right: 130px;
   font-style: italic;
   font-weight: bold;
   text-align: center;
@@ -508,7 +494,7 @@ body {
   bottom: 150px;
   border-radius: 25px;
   font-size: 50px;
-  padding: 9px 0 9px 17px;
+  padding: 8px 0 9px 14px;
   left: 480px;
   background: #4F4B5A;
 }
@@ -520,7 +506,7 @@ body {
   bottom: 90px;
   border-radius: 25px;
   font-size: 50px;
-  padding: 9px 0 9px 17px;
+  padding: 8px 0 9px 14px;
   right: 450px;
   background: #66A9A5;
 }
@@ -544,5 +530,215 @@ body {
   }
   to {
     opacity: 1;
+  }
+}
+
+/* Large desktops and laptops more than 1200px */
+/* Landscape tablets 993 to 1200px and medium desktops */
+@media all and (max-width: 1200px) {
+  .container {
+    width: 992px;
+  }
+  .container .wrapper .button {
+    left: 470px;
+    top: 110px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+  }
+  .container .wrapper .quote, .container .wrapper .author {
+    border-radius: 20px;
+    padding: 15px 20px;
+    width: 350px;
+    font-size: 16px;
+  }
+  .container .wrapper .quote {
+    padding-right: 30px;
+    bottom: 170px;
+    left: 50px;
+  }
+  .container .wrapper .author {
+    width: 330px;
+    bottom: 110px;
+    right: 50px;
+  }
+  .container .wrapper .quote-open {
+    width: 45px;
+    height: 45px;
+    bottom: 150px;
+    border-radius: 22.5px;
+    font-size: 40px;
+    padding: 9px 0 5px 13px;
+    left: 375px;
+  }
+  .container .wrapper .quote-close {
+    width: 45px;
+    height: 45px;
+    bottom: 90px;
+    border-radius: 22.5px;
+    font-size: 40px;
+    padding: 9px 0 5px 13px;
+    right: 355px;
+  }
+}
+
+/* Portrait tablets 768 to 992px and small desktops */
+@media (max-width: 992px) {
+  svg {
+    position: absolute;
+    width: 450px;
+    margin: auto;
+  }
+  .container {
+    width: 768px;
+  }
+  .container .wrapper .button {
+    left: 340px;
+    top: 100px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+  }
+  .container .wrapper .quote, .container .wrapper .author {
+    border-radius: 15px;
+    padding: 10px 15px;
+    width: 250px;
+    font-size: 14px;
+  }
+  .container .wrapper .quote {
+    padding-right: 20px;
+    bottom: 220px;
+    left: 10px;
+  }
+  .container .wrapper .author {
+    width: 220px;
+    bottom: 150px;
+    right: 70px;
+  }
+  .container .wrapper .quote-open {
+    width: 40px;
+    height: 40px;
+    bottom: 195px;
+    border-radius: 20px;
+    font-size: 35px;
+    padding: 9px 0 5px 13px;
+    left: 245px;
+  }
+  .container .wrapper .quote-close {
+    width: 40px;
+    height: 40px;
+    bottom: 125px;
+    border-radius: 20px;
+    font-size: 35px;
+    padding: 9px 0 5px 13px;
+    right: 270px;
+  }
+}
+
+/* Landscape phones 481 to 767px and portrait tablets */
+@media (max-width: 767px) {
+  svg {
+    position: absolute;
+    width: 350px;
+    margin: 0 60px;
+  }
+  .container {
+    width: 481px;
+  }
+  .container .wrapper .button {
+    left: 220px;
+    top: 80px;
+    width: 35px;
+    height: 35px;
+    border-radius: 17.5px;
+  }
+  .container .wrapper .quote, .container .wrapper .author {
+    border-radius: 15px;
+    padding: 10px 10px 10px 15px;
+    width: 160px;
+    font-size: 10px;
+  }
+  .container .wrapper .quote {
+    padding-right: 20px;
+    bottom: 280px;
+    left: 0px;
+  }
+  .container .wrapper .author {
+    width: 155px;
+    bottom: 225px;
+    right: 0px;
+    padding: 10px;
+  }
+  .container .wrapper .quote-open {
+    width: 30px;
+    height: 30px;
+    bottom: 265px;
+    border-radius: 15px;
+    font-size: 30px;
+    padding: 6px 0 5px 8px;
+    left: 145px;
+  }
+  .container .wrapper .quote-close {
+    width: 30px;
+    height: 30px;
+    bottom: 210px;
+    border-radius: 15px;
+    font-size: 30px;
+    padding: 6px 0 5px 8px;
+    right: 140px;
+  }
+}
+
+/* Portrait phones 480px and smaller */
+@media (max-width: 480px) {
+  svg {
+    position: absolute;
+    width: 300px;
+    margin: 0 20px;
+  }
+  .container {
+    width: 350px;
+  }
+  .container .wrapper .button {
+    left: 160px;
+    top: 70px;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+  }
+  .container .wrapper .quote, .container .wrapper .author {
+    border-radius: 15px;
+    padding: 5px 10px 5px 15px;
+    width: 115px;
+    font-size: 10px;
+  }
+  .container .wrapper .quote {
+    padding-right: 20px;
+    bottom: 305px;
+    left: 0px;
+  }
+  .container .wrapper .author {
+    width: 105px;
+    bottom: 265px;
+    right: 0px;
+    padding: 5px;
+  }
+  .container .wrapper .quote-open {
+    width: 30px;
+    height: 30px;
+    bottom: 290px;
+    border-radius: 15px;
+    font-size: 30px;
+    padding: 6px 0 5px 8px;
+    left: 100px;
+  }
+  .container .wrapper .quote-close {
+    width: 30px;
+    height: 30px;
+    bottom: 250px;
+    border-radius: 15px;
+    font-size: 30px;
+    padding: 6px 0 5px 8px;
+    right: 90px;
   }
 }

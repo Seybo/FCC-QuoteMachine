@@ -1,23 +1,200 @@
 /* Large desktops and laptops more than 1200px */
-
 @media (min-width: 1201px) {
 
 }
 
 /* Landscape tablets 993 to 1200px and medium desktops */
-@media (max-width: 1200px) {
+@media all and (max-width: 1200px) {
   
+  .container {
+    width: 992px;
+
+    .wrapper {
+
+      .button {
+        left: 470px;
+        top: 110px;
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+      }
+
+      .quote, .author {
+        border-radius: 20px;
+        padding: 15px 20px;
+        width: 350px;
+        font-size: $font-size*0.8;
+      }
+
+      .quote {
+        padding-right: 30px;
+        bottom: 170px;
+        left: 50px;
+      }
+
+      .author {
+        width: 330px;
+        bottom: 110px;
+        right: 50px;
+      } 
+
+      .quote-open {
+        width: 45px;
+        height: 45px;
+        bottom: 150px;
+        border-radius: 22.5px;
+        font-size: $quote-font-size*0.8;
+        padding: 9px 0 5px 13px;
+        left: 375px;
+      }
+
+      .quote-close {
+        width: 45px;
+        height: 45px;
+        bottom: 90px;
+        border-radius: 22.5px;
+        font-size: $quote-font-size*0.8;
+        padding: 9px 0 5px 13px;
+        right: 355px;
+      }
+    }
+  }
 
 }
 
 /* Portrait tablets 768 to 992px and small desktops */
 @media (max-width: 992px) {
 
+  svg {
+      position: absolute;
+      // top: 20vh;
+      // left: 20vw;
+      width: 450px;
+      // height: 50px;
+      margin: auto;
+  }
+
+  .container {
+    width: 768px;
+
+    .wrapper {
+
+      .button {
+        left: 340px;
+        top: 100px;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+      }
+
+      .quote, .author {
+        border-radius: 15px;
+        padding: 10px 15px;
+        width: 250px;
+        font-size: $font-size*0.7;
+      }
+
+      .quote {
+        padding-right: 20px;
+        bottom: 220px;
+        left: 10px;
+      }
+
+      .author {
+        width: 220px;
+        bottom: 150px;
+        right: 70px;
+      } 
+
+      .quote-open {
+        width: 40px;
+        height: 40px;
+        bottom: 195px;
+        border-radius: 20px;
+        font-size: $quote-font-size*0.7;
+        padding: 9px 0 5px 13px;
+        left: 245px;
+      }
+
+      .quote-close {
+        width: 40px;
+        height: 40px;
+        bottom: 125px;
+        border-radius: 20px;
+        font-size: $quote-font-size*0.7;
+        padding: 9px 0 5px 13px;
+        right: 270px;
+      }
+    }
+  }
 }
 
 /* Landscape phones 481 to 767px and portrait tablets */
 @media (max-width: 767px) {
 
+  svg {
+      position: absolute;
+      // top: 20vh;
+      // left: 20vw;
+      width: 350px;
+      margin: 0 60px;
+      // height: 50px;
+  }
+
+  .container {
+    width: 481px;
+
+    .wrapper {
+
+      .button {
+        left: 220px;
+        top: 80px;
+        width: 35px;
+        height: 35px;
+        border-radius: 17.5px;
+      }
+
+      .quote, .author {
+        border-radius: 15px;
+        padding: 10px 10px 10px 15px;
+        width: 160px;
+        font-size: $font-size*0.5;
+      }
+
+      .quote {
+        padding-right: 20px;
+        bottom: 280px;
+        left: 0px;
+      }
+
+      .author {
+        width: 155px;
+        bottom: 225px;
+        right: 0px;
+        padding: 10px;
+      } 
+
+      .quote-open {
+        width: 30px;
+        height: 30px;
+        bottom: 265px;
+        border-radius: 15px;
+        font-size: $quote-font-size*0.6;
+        padding: 6px 0 5px 8px;
+        left: 145px;
+      }
+
+      .quote-close {
+        width: 30px;
+        height: 30px;
+        bottom: 210px;
+        border-radius: 15px;
+        font-size: $quote-font-size*0.6;
+        padding: 6px 0 5px 8px;
+        right: 140px;
+      }
+    }
+  }
 }
 
 /* Portrait phones 480px and smaller */
@@ -25,10 +202,68 @@
   
   svg {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 50px;
-      height: 50px;
+      // top: 20vh;
+      // left: 20vw;
+      width: 300px;
+      margin: 0 20px;
+      // height: 50px;
+  }
+
+  .container {
+    width: 350px;
+
+    .wrapper {
+
+      // height: 200px;
+
+      .button {
+        left: 160px;
+        top: 70px;
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+      }
+
+      .quote, .author {
+        border-radius: 15px;
+        padding: 5px 10px 5px 15px;
+        width: 115px;
+        font-size: $font-size*0.5;
+      }
+
+      .quote {
+        padding-right: 20px;
+        bottom: 305px;
+        left: 0px;
+      }
+
+      .author {
+        width: 105px;
+        bottom: 265px;
+        right: 0px;
+        padding: 5px;
+      } 
+
+      .quote-open {
+        width: 30px;
+        height: 30px;
+        bottom: 290px;
+        border-radius: 15px;
+        font-size: $quote-font-size*0.6;
+        padding: 6px 0 5px 8px;
+        left: 100px;
+      }
+
+      .quote-close {
+        width: 30px;
+        height: 30px;
+        bottom: 250px;
+        border-radius: 15px;
+        font-size: $quote-font-size*0.6;
+        padding: 6px 0 5px 8px;
+        right: 90px;
+      }
+    }
   }
 
 }
