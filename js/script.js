@@ -8,6 +8,7 @@ var elementsWithShadow = document.getElementsByClassName('shadowed');
 var JSONData;
 var colorsData;
 var quotesData;
+var lastSchemeNumber = 999;
 
 function randomNumberWithinRange(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -39,6 +40,12 @@ function loadJSONs() {
 
 function changeColors(colorsData) {
   var scheme_number = randomNumberWithinRange(0, colorsData.length-1);
+
+  while (scheme_number === lastSchemeNumber){
+     scheme_number = randomNumberWithinRange(0, colorsData.length-1);
+  }
+  lastSchemeNumber = scheme_number;
+
   document.body.style.background = colorsData[scheme_number].background;
   document.body.style.transition="all 1s";
 
