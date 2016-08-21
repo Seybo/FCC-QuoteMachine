@@ -40,23 +40,30 @@ function loadJSONs() {
 function changeColors(colorsData) {
   var scheme_number = randomNumberWithinRange(0, colorsData.length-1);
   document.body.style.background = colorsData[scheme_number].background;
+  document.body.style.transition="all 1s";
 
   for(i=0; i<elementsWithColor1.length; i++) {
     elementsWithColor1[i].style.fill = colorsData[scheme_number].color1;
     elementsWithColor1[i].style.background = colorsData[scheme_number].color1;
     elementsWithColor1[i].style.color = colorsData[scheme_number].background;
-    elementsWithColor1[i].style.boxShadow = colorsData[scheme_number].shadow;
+    elementsWithColor1[i].style.transition="all 0.5s";
   }
 
   for(i=0; i<elementsWithColor2.length; i++) {
     elementsWithColor2[i].style.fill = colorsData[scheme_number].color2;
     elementsWithColor2[i].style.background = colorsData[scheme_number].color2;
     elementsWithColor2[i].style.color = colorsData[scheme_number].background;
-    elementsWithColor2[i].style.boxShadow = colorsData[scheme_number].shadow;
+    elementsWithColor2[i].style.transition="all 0.5s";
+  }
+
+  for(i=0; i<elementsWithShadow.length; i++) {
+    elementsWithShadow[i].style.boxShadow = colorsData[scheme_number].shadow;
+    elementsWithShadow[i].style.transition="all 0.5s";
   }
 
   for(i=0; i<elementsWithBackgroundColor.length; i++) {
     elementsWithBackgroundColor[i].style.fill = colorsData[scheme_number].background;
+    elementsWithBackgroundColor[i].style.transition="all 0.5s";
   }
 }
 

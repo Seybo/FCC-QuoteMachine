@@ -1,3 +1,5 @@
+@import 'normalize';
+
 $background: #ffffff #e1eef6 #34314c #d9e1e8 #A593E0
              #f4f5f9 #fbd14b #fff1b9 #75D701;
 
@@ -17,42 +19,30 @@ $schema-number: random(9);
 
 body {
   background: #ffffff;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 .container {
   position: relative;
   margin: 10vh auto;
-  width: 1000px;
+  width: 1200px;
 
   color: #ffffff;
 
   .wrapper {
     position: relative;
-
-    margin: auto; // block content centering
+    height: 500px;
+    // width: 1000px;
+    // margin: auto; // block content centering
 
     .bg {
-      height: 100%;
-      position: relative; // needed for z-index
-      z-index: 999;
+      width: 500px;
+      margin: 2vh auto;
 
-      .button {
-        position: absolute;
-        left: 40%;
-        top: 25%;
-        width: 60px;
-        height: 60px;
-        border-radius: 50px;
-        background: #ff5f2e;
-        box-shadow: 3px 3px 3px $sh-light;
-        cursor: pointer;
-
-        &:hover {
-          transform: scale(1.1);
-          transition: all .2s ease-in-out;  
-        }
-      }
-    
       .color-1 {
         fill: #4F4B5A; 
       }       
@@ -61,7 +51,24 @@ body {
       }       
       .background {
         fill: #ffffff; 
-      }       
+      }    
+    }
+    
+    .button {
+      position: absolute;
+      left: 570px;
+      top: 100px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50px;
+      background: #ff5f2e;
+      box-shadow: 3px 3px 3px $sh-light;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.1);
+        transition: all .2s ease-in-out;  
+      }
     }
 
     .quote, .author {
@@ -69,7 +76,6 @@ body {
       border-radius: 20px;
       padding: 20px;
       width: 380px;
-      box-sizing: border-box;
     }
 
     .shadowed {
@@ -78,20 +84,44 @@ body {
 
     .quote {
       padding-right: 30px;
-      bottom: 280px;
-      left: -40px;
+      bottom: 170px;
+      left: 130px;
       background: #4F4B5A;
     }
 
     .author {
-      padding-left: 40px;
-      bottom: 340px;
-      right: 90px;
+      bottom: 110px;
+      right: 100px;
       font-style: italic;
       font-weight: bold;
       text-align: center;
       background: #66A9A5;
     } 
+
+    .quote-open {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      bottom: 150px;
+      border-radius: 25px;
+      font-size: 50px;
+      padding: 9px 0 9px 17px;
+      left: 480px;
+      background: #4F4B5A;
+    }
+
+    .quote-close {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      bottom: 90px;
+      border-radius: 25px;
+      font-size: 50px;
+      padding: 9px 0 9px 17px;
+      right: 450px;
+      background: #66A9A5;
+    }
+
   }
   
 }
