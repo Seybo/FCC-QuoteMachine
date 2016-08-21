@@ -5,9 +5,8 @@ var elementsWithColor2 = document.getElementsByClassName('color-2');
 var elementsWithBackgroundColor = document.getElementsByClassName('background');
 var elementsWithShadow = document.getElementsByClassName('shadowed');
 
-var JSONData;
-var colorsData;
-var quotesData;
+var colorsData = null;
+var quotesData = null;
 var lastSchemeNumber = 999;
 
 function randomNumberWithinRange(min, max) {
@@ -15,30 +14,23 @@ function randomNumberWithinRange(min, max) {
 }
 
 newColorButton.addEventListener('click', function() {
-      loadJSONs();
+      changeColors();
+      changeQuote();
     });
 
-function loadJSONs() {
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'data/color_schemes.json');
-  xhr.timeout = 1000;
-  xhr.onload = function(evt) {
-    var target = evt.target || evt.srcElement;
-    changeColors(JSON.parse(target.response));
-  }
-  xhr.send();
-
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'data/quotes.json');
-  xhr.timeout = 1000;
-  xhr.onload = function(evt) {
-    var target = evt.target || evt.srcElement;
-    changeQuote(JSON.parse(target.response));  
-  }
-  xhr.send();
+function loadColorSchemes(data) {
+  colorsData = data;
 }
 
-function changeColors(colorsData) {
+function loadQuotes(data) {
+  quotesData = data;
+}
+
+var JSONDataLoadScript = document.createElement('script');
+JSONDataLoadScript.src = 'data.js';
+document.body.appendChild(JSONDataLoadScript);
+
+function changeColors() {
   var scheme_number = randomNumberWithinRange(0, colorsData.length-1);
 
   while (scheme_number === lastSchemeNumber){
@@ -74,13 +66,11 @@ function changeColors(colorsData) {
   }
 }
 
-function changeQuote(quotesData) {
+function changeQuote() {
  
   var quote_number = randomNumberWithinRange(0, quotesData.length-1);
   var quote = document.getElementById("quote");
   quote.innerHTML = quotesData[quote_number].quote;
   var author = document.getElementById("author");
   author.innerHTML = quotesData[quote_number].author;
-  console.log(quote.innerHTML);
-  console.log(typeof quote);
 }
