@@ -1,4 +1,5 @@
 @import 'normalize';
+@import 'media';
 
 $background: #ffffff #e1eef6 #34314c #d9e1e8 #A593E0
              #f4f5f9 #fbd14b #fff1b9 #75D701;
@@ -56,7 +57,7 @@ body {
     
     .button {
       position: absolute;
-      left: 570px;
+      left: 575px;
       top: 100px;
       width: 60px;
       height: 60px;
@@ -124,4 +125,37 @@ body {
 
   }
   
+}
+
+.quote-animation {
+
+  animation-name: animation-text-appearing;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+
+}
+
+.author-animation {
+
+  animation-name: animation-text-appearing;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+
+}
+
+@keyframes animation-text-appearing {
+
+  from {
+
+      opacity: 0;
+
+  }  
+
+  to {
+
+      opacity: 1;
+      
+  }  
+
 }

@@ -404,6 +404,21 @@ textarea {
   /* 2 */
 }
 
+/* Large desktops and laptops more than 1200px */
+/* Landscape tablets 993 to 1200px and medium desktops */
+/* Portrait tablets 768 to 992px and small desktops */
+/* Landscape phones 481 to 767px and portrait tablets */
+/* Portrait phones 480px and smaller */
+@media (max-width: 480px) {
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+  }
+}
+
 body {
   background: #ffffff;
   box-sizing: border-box;
@@ -444,7 +459,7 @@ body {
 
 .container .wrapper .button {
   position: absolute;
-  left: 570px;
+  left: 575px;
   top: 100px;
   width: 60px;
   height: 60px;
@@ -508,4 +523,26 @@ body {
   padding: 9px 0 9px 17px;
   right: 450px;
   background: #66A9A5;
+}
+
+.quote-animation {
+  animation-name: animation-text-appearing;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+}
+
+.author-animation {
+  animation-name: animation-text-appearing;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes animation-text-appearing {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

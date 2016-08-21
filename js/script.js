@@ -14,9 +14,9 @@ function randomNumberWithinRange(min, max) {
 }
 
 newColorButton.addEventListener('click', function() {
-      changeColors();
-      changeQuote();
-    });
+  changeColors();
+  changeQuote();
+});
 
 function loadColorSchemes(data) {
   colorsData = data;
@@ -67,8 +67,8 @@ function changeColors() {
 }
 
 function changeQuote() {
- 
   var quote_number = randomNumberWithinRange(0, quotesData.length-1);
+
   var quote = document.getElementById("quote");
   quote.innerHTML = quotesData[quote_number].quote;
   var author = document.getElementById("author");
