@@ -70,7 +70,7 @@ function changeQuote() {
   var quote_number = randomNumberWithinRange(0, quotesData.length-1);
 
   var quote = document.getElementById("quote");
-  quote.innerHTML = quotesData[quote_number].quote;
+  quote.childNodes[0].nodeValue = quotesData[quote_number].quote;
   var author = document.getElementById("author");
-  author.innerHTML = quotesData[quote_number].author;
+  author.childNodes[0].nodeValue = quotesData[quote_number].author;
 }
