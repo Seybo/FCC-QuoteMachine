@@ -421,7 +421,6 @@ textarea {
   align-items: center;
   max-width: 2000px;
   margin: auto;
-  opacity: 0.5;
   background: #d9e1e8;
 }
 
@@ -429,6 +428,7 @@ textarea {
   top: 0;
   text-transform: uppercase;
   font-weight: bold;
+  opacity: 0.5;
 }
 
 .wrapper footer {
@@ -442,7 +442,6 @@ textarea {
 }
 
 .wrapper footer .social-section {
-  font-size: 2vmin;
   padding-left: 2vw;
 }
 
@@ -450,6 +449,10 @@ textarea {
   text-decoration: none;
   display: inline-block;
   padding: 0 1vw;
+}
+
+.wrapper .shadowed {
+  box-shadow: 0.2vw 0.2vw 0.2vw rgba(79, 75, 90, 0.5);
 }
 
 .wrapper .content {
@@ -460,7 +463,6 @@ textarea {
   height: 100vh;
   max-width: 2000px;
   position: relative;
-  margin: auto;
   color: #d9e1e8;
 }
 
@@ -485,14 +487,10 @@ textarea {
 .wrapper .content .quote,
 .wrapper .content .author {
   position: absolute;
-  border-radius: 20px;
+  border-radius: 2vmin;
   padding: 2vmin;
   width: 30vw;
   max-width: 400px;
-}
-
-.wrapper .content .shadowed {
-  box-shadow: 0.2vw 0.2vw 0.2vw rgba(79, 75, 90, 0.5);
 }
 
 .wrapper .content .quote {
@@ -535,9 +533,6 @@ textarea {
   max-height: 50px;
   border-radius: 3vmin;
   bottom: -2vh;
-  text-align: center;
-  font-size: 8vmin;
-  text-align: center;
 }
 
 .wrapper .content .quote-sign-open svg,
@@ -558,8 +553,6 @@ textarea {
 .wrapper .content .quote-sign-close {
   left: -5%;
   background: #9baec8;
-  font-style: normal;
-  font-weight: normal;
 }
 
 .wrapper .content .vector-bg svg {

@@ -16,7 +16,6 @@
 
     max-width: 2000px;
     margin: auto;
-    opacity: 0.5;
     background: #d9e1e8;
   }
 
@@ -24,6 +23,7 @@
     top: 0;
     text-transform: uppercase;
     font-weight: bold;
+    opacity: 0.5;
   }
 
   footer {
@@ -36,14 +36,17 @@
     }
    
     .social-section {
-      font-size: 2vmin;
-      padding-left: 2vw;
+      padding-left: 2vw; // to align with the book (visually)
       a {
         text-decoration: none;
         display: inline-block;
         padding: 0 1vw;
       }
     }
+  }
+
+  .shadowed {
+    box-shadow: 0.2vw 0.2vw 0.2vw rgba(79, 75, 90, 0.5);
   }
 
   .content {
@@ -56,14 +59,13 @@
 
     max-width: 2000px;
     position: relative;
-    margin: auto;
 
     color: #d9e1e8;
 
     .button {
       z-index: 10;
       margin-bottom: -25vmin;
-      margin-left: 1vmin;
+      margin-left: 1vmin; // to align with the book (visually)
 
       width: 10vmin;
       height: 10vmin;
@@ -84,14 +86,10 @@
     .quote, 
     .author {
       position: absolute;
-      border-radius: 20px;
+      border-radius: 2vmin;
       padding: 2vmin;
       width: 30vw;
       max-width: 400px;
-    }
-
-    .shadowed {
-      box-shadow: 0.2vw 0.2vw 0.2vw rgba(79, 75, 90, 0.5);
     }
 
     .quote {
@@ -137,9 +135,6 @@
       max-height: 50px;
       border-radius: 3vmin;
       bottom: -2vh;
-      text-align: center;
-      font-size: 8vmin;
-      text-align: center;
 
       svg {
         width: 9vmin;
@@ -159,8 +154,6 @@
     .quote-sign-close {
       left: -5%;
       background: #9baec8;
-      font-style: normal;
-      font-weight: normal;
     }
 
     .vector-bg {
