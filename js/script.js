@@ -1,9 +1,9 @@
 var newColorButton = document.querySelector('#new-color');
 
-var elementsWithColor1 = document.getElementsByClassName('color-1');
-var elementsWithColor2 = document.getElementsByClassName('color-2');
-var elementsWithBackgroundColor = document.getElementsByClassName('background');
-var elementsWithShadow = document.getElementsByClassName('shadowed');
+var ELEMENTS_WITH_COLOR_1 = $('.color-1');
+var ELEMENTS_WITH_COLOR_2 = $('.color-2');
+var ELEMENTS_WITH_BG_COLOR = $('.background');
+var ELEMENTS_WITH_SHADOW = $('.shadowed');
 
 var colorsData = null;
 var quotesData = null;
@@ -41,36 +41,26 @@ function changeColors() {
   document.body.style.background = colorsData[scheme_number].background;
   document.body.style.transition="all 1s";
 
-  for(i=0; i<elementsWithColor1.length; i++) {
-    elementsWithColor1[i].style.fill = colorsData[scheme_number].color1;
-    elementsWithColor1[i].style.background = colorsData[scheme_number].color1;
-    elementsWithColor1[i].style.color = colorsData[scheme_number].background;
-    elementsWithColor1[i].style.transition="all 0.5s";
-  }
+  ELEMENTS_WITH_COLOR_1.css('background', colorsData[scheme_number].color1);
+  ELEMENTS_WITH_COLOR_1.css('fill', colorsData[scheme_number].color1);
+  ELEMENTS_WITH_COLOR_1.css('color', colorsData[scheme_number].background);
+  ELEMENTS_WITH_COLOR_1.css('transition', "all 0.5s");
 
-  for(i=0; i<elementsWithColor2.length; i++) {
-    elementsWithColor2[i].style.fill = colorsData[scheme_number].color2;
-    elementsWithColor2[i].style.background = colorsData[scheme_number].color2;
-    elementsWithColor2[i].style.color = colorsData[scheme_number].background;
-    elementsWithColor2[i].style.transition="all 0.5s";
-  }
+  ELEMENTS_WITH_COLOR_2.css('background', colorsData[scheme_number].color2);
+  ELEMENTS_WITH_COLOR_2.css('fill', colorsData[scheme_number].color2);
+  ELEMENTS_WITH_COLOR_2.css('color', colorsData[scheme_number].background);
+  ELEMENTS_WITH_COLOR_2.css('transition', "all 0.5s");
 
-  for(i=0; i<elementsWithShadow.length; i++) {
-    elementsWithShadow[i].style.boxShadow = colorsData[scheme_number].shadow;
-    elementsWithShadow[i].style.transition="all 0.5s";
-  }
+  ELEMENTS_WITH_SHADOW.css('boxShadow', colorsData[scheme_number].shadow);
+  ELEMENTS_WITH_SHADOW.css('transition', "all 0.5s");
 
-  for(i=0; i<elementsWithBackgroundColor.length; i++) {
-    elementsWithBackgroundColor[i].style.fill = colorsData[scheme_number].background;
-    elementsWithBackgroundColor[i].style.transition="all 0.5s";
-  }
+  ELEMENTS_WITH_BG_COLOR.css('fill', colorsData[scheme_number].background);
+  ELEMENTS_WITH_BG_COLOR.css('transition', "all 0.5s");
 }
 
 function changeQuote() {
   var quote_number = randomNumberWithinRange(0, quotesData.length-1);
 
-  var quote = document.getElementById("quote");
-  quote.childNodes[0].nodeValue = quotesData[quote_number].quote;
-  var author = document.getElementById("author");
-  author.childNodes[0].nodeValue = quotesData[quote_number].author;
+  $("#quote span").text(quotesData[quote_number].quote);
+  $("#author span").text(quotesData[quote_number].author);
 }
